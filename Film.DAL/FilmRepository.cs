@@ -16,7 +16,14 @@ namespace S3Film.DAL
         /// <returns></returns>
         public List<Film> GetFilms()
         {
-            return HandleData(ExecuteQuery("SELECT * FROM Film"));
+            string sql = "SELECT * FROM Film";
+            return HandleData(ExecuteQuery(sql));
+        }
+
+        public List<Film> GetFilms(string titel)
+        {
+            string sql = $"SELECT * FROM Film WHERE Titel LIKE '%{titel}%'";
+            return HandleData(ExecuteQuery(sql));
         }
 
         /// <summary>
