@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 
-namespace Film.DAL
+namespace S3Film.DAL
 {
     public abstract class BaseRepository
     {

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Film.Entities
+namespace S3Film.Entities
 {
     public class Film
     {

@@ -7,8 +7,8 @@
     <ProjectGuid>{622CE843-4752-4624-8ACE-8E76C0F1586C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Film.DAL</RootNamespace>
-    <AssemblyName>Film.DAL</AssemblyName>
+    <RootNamespace>S3Film.DAL</RootNamespace>
+    <AssemblyName>S3Film.DAL</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -42,7 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseRepository.cs" />
+    <Compile Include="FilmRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Film.Entities\S3Film.Entities.csproj">
+      <Project>{0F46ECE9-2A53-410B-9A85-4E7512568961}</Project>
+      <Name>S3Film.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

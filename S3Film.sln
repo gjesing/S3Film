@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29230.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Film.DAL", "Film.DAL\Film.DAL.csproj", "{622CE843-4752-4624-8ACE-8E76C0F1586C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S3Film.DAL", "Film.DAL\S3Film.DAL.csproj", "{622CE843-4752-4624-8ACE-8E76C0F1586C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Film.Entities", "Film.Entities\Film.Entities.csproj", "{0F46ECE9-2A53-410B-9A85-4E7512568961}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S3Film.Entities", "Film.Entities\S3Film.Entities.csproj", "{0F46ECE9-2A53-410B-9A85-4E7512568961}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
