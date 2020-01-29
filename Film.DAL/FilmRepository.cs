@@ -13,7 +13,7 @@ namespace S3Film.DAL
         /// <summary>
         /// Retrieves all Films from the database.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A List of all Films</returns>
         public List<Film> GetFilms()
         {
             string sql = "SELECT * FROM Film";
@@ -24,7 +24,7 @@ namespace S3Film.DAL
         /// Gets all Films from the database where Titel contains the specified string.
         /// </summary>
         /// <param name="titel">The string to search for in the Film Titels</param>
-        /// <returns></returns>
+        /// <returns>A list of Films containing the specified string</returns>
         public List<Film> GetFilms(string titel)
         {
             string sql = $"SELECT * FROM Film WHERE Titel LIKE '%{titel}%'";
@@ -33,10 +33,9 @@ namespace S3Film.DAL
 
         /// <summary>
         /// Helper method used to convert DataTable to list of Films.
-        /// Returns an empty list if the parameter is null.
         /// </summary>
         /// <param name="dataTable">The DataTable to be converted to list of Films</param>
-        /// <returns></returns>
+        /// <returns>A list of Films from the database (empty list if the parameter is null)</returns>
         private List<Film> HandleData(DataTable dataTable)
         {
             List<Film> films = new List<Film>();
@@ -57,6 +56,40 @@ namespace S3Film.DAL
                 films.Add(film);
             }
             return films;
+        }
+
+        /// <summary>
+        /// Inserts Film into database.
+        /// </summary>
+        /// <param name="film">The Film to be inserted into the database</param>
+        /// <returns>A string telling the validation result</returns>
+        public string InsertFilm(Film film)
+        {
+            bool isValid = IsValid(film, out string message);
+            if (!isValid)
+            {
+                return message;
+            }
+            string sql = $"INSERT INTO Film VALUES ('{film.Titel}', '{film.Land}', {film.Year}, '{film.Genre}', {film.Oscars})";
+            ExecuteNonQuery(sql);
+            return message;
+        }
+
+        /// <summary>
+        /// Validates Film before inserting it into the database.
+        /// </summary>
+        /// <param name="film">The Film to be validated</param>
+        /// <param name="message">A string telling the result of the validation</param>
+        /// <returns>false if any of the properties of the Film is null, else true</returns>
+        private bool IsValid(Film film, out string message)
+        {
+            if (string.IsNullOrWhiteSpace(film.Titel) || string.IsNullOrWhiteSpace(film.Land) || string.IsNullOrWhiteSpace(film.Genre))
+            {
+                message = "Alle felter skal udfyldes.";
+                return false;
+            }
+            message = $"Filmen {film.Titel} er oprettet.";
+            return true;
         }
     }
 }

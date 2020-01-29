@@ -46,9 +46,8 @@ namespace S3Film.DAL
         /// This is used with an SQL statement using SELECT.
         /// </summary>
         /// <param name="sql">The SQL statement to be sent to the database</param>
-        /// <returns>A DataSet object containing the result</returns>
         /// <exception cref="SqlException">Thrown when the server returns a warning or error.</exception>
-        /// <returns></returns>
+        /// <returns>A DataSet object containing the result</returns>
         protected DataTable ExecuteQuery(string sql)
         {
             DataTable dataTable = new DataTable(); //The dataset to be returned
