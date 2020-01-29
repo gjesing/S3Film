@@ -11,7 +11,7 @@ namespace S3Film.DAL
     public class FilmRepository : BaseRepository
     {
         /// <summary>
-        /// Retrieves all Films from the database
+        /// Retrieves all Films from the database.
         /// </summary>
         /// <returns></returns>
         public List<Film> GetFilms()
@@ -20,6 +20,11 @@ namespace S3Film.DAL
             return HandleData(ExecuteQuery(sql));
         }
 
+        /// <summary>
+        /// Gets all Films from the database where Titel contains the specified string.
+        /// </summary>
+        /// <param name="titel">The string to search for in the Film Titels</param>
+        /// <returns></returns>
         public List<Film> GetFilms(string titel)
         {
             string sql = $"SELECT * FROM Film WHERE Titel LIKE '%{titel}%'";
@@ -30,7 +35,7 @@ namespace S3Film.DAL
         /// Helper method used to convert DataTable to list of Films.
         /// Returns an empty list if the parameter is null.
         /// </summary>
-        /// <param name="dataTable"></param>
+        /// <param name="dataTable">The DataTable to be converted to list of Films</param>
         /// <returns></returns>
         private List<Film> HandleData(DataTable dataTable)
         {
