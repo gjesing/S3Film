@@ -32,6 +32,23 @@ namespace S3Film.DAL
         }
 
         /// <summary>
+        /// Inserts Film into database.
+        /// </summary>
+        /// <param name="film">The Film to be inserted into the database</param>
+        /// <returns>A string telling the validation result</returns>
+        public string InsertFilm(Film film)
+        {
+            bool isValid = IsValid(film, out string message);
+            if (!isValid)
+            {
+                return message;
+            }
+            string sql = $"INSERT INTO Film VALUES ('{film.Titel}', '{film.Land}', {film.Year}, '{film.Genre}', {film.Oscars})";
+            ExecuteNonQuery(sql);
+            return message;
+        }
+
+        /// <summary>
         /// Helper method used to convert DataTable to list of Films.
         /// </summary>
         /// <param name="dataTable">The DataTable to be converted to list of Films</param>
@@ -56,23 +73,6 @@ namespace S3Film.DAL
                 films.Add(film);
             }
             return films;
-        }
-
-        /// <summary>
-        /// Inserts Film into database.
-        /// </summary>
-        /// <param name="film">The Film to be inserted into the database</param>
-        /// <returns>A string telling the validation result</returns>
-        public string InsertFilm(Film film)
-        {
-            bool isValid = IsValid(film, out string message);
-            if (!isValid)
-            {
-                return message;
-            }
-            string sql = $"INSERT INTO Film VALUES ('{film.Titel}', '{film.Land}', {film.Year}, '{film.Genre}', {film.Oscars})";
-            ExecuteNonQuery(sql);
-            return message;
         }
 
         /// <summary>

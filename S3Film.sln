@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S3Film.DAL", "Film.DAL\S3Fi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S3Film.Entities", "Film.Entities\S3Film.Entities.csproj", "{0F46ECE9-2A53-410B-9A85-4E7512568961}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S3Film.GUI", "S3Film.GUI\S3Film.GUI.csproj", "{CEC8313E-8E8A-483B-B843-52DE5CEDFD48}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0F46ECE9-2A53-410B-9A85-4E7512568961}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F46ECE9-2A53-410B-9A85-4E7512568961}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F46ECE9-2A53-410B-9A85-4E7512568961}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEC8313E-8E8A-483B-B843-52DE5CEDFD48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEC8313E-8E8A-483B-B843-52DE5CEDFD48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEC8313E-8E8A-483B-B843-52DE5CEDFD48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEC8313E-8E8A-483B-B843-52DE5CEDFD48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
