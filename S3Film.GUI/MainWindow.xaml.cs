@@ -1,4 +1,6 @@
-﻿using System;
+﻿using S3Film.DAL;
+using S3Film.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,13 @@ namespace S3Film.GUI
     /// </summary>
     public partial class MainWindow : Window
     {
+        public List<Film> Films { get; set; } = new List<Film>();
         public MainWindow()
         {
             InitializeComponent();
+            FilmRepository filmRepository = new FilmRepository();
+            Films = filmRepository.GetFilms();
+            filmGrid.ItemsSource = Films;
         }
     }
 }

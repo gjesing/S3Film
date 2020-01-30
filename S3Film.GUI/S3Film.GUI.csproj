@@ -94,5 +94,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Film.DAL\S3Film.DAL.csproj">
+      <Project>{622CE843-4752-4624-8ACE-8E76C0F1586C}</Project>
+      <Name>S3Film.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Film.Entities\S3Film.Entities.csproj">
+      <Project>{0F46ECE9-2A53-410B-9A85-4E7512568961}</Project>
+      <Name>S3Film.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -7,6 +7,18 @@
         mc:Ignorable="d"
         Title="Film" Height="450" Width="800">
     <Grid>
-        
+        <DataGrid x:Name="filmGrid" ItemsSource="{Binding Films}" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridCell}">
+                    <Style.Triggers>
+                        <Trigger Property="DataGridCell.IsSelected" Value="true">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="Foreground" Value="#000000"/>
+                            <Setter Property="BorderThickness" Value="0"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
     </Grid>
 </Window>
