@@ -44,7 +44,12 @@ namespace S3Film.DAL
                 return message;
             }
             string sql = $"INSERT INTO Film VALUES ('{film.Titel}', '{film.Land}', {film.Year}, '{film.Genre}', {film.Oscars})";
-            ExecuteNonQuery(sql);
+            int affectedRows = ExecuteNonQuery(sql);
+            if (affectedRows > 0)
+            {
+                return message;
+            }
+            message = "Filmen kunne ikke oprettes.";
             return message;
         }
 
