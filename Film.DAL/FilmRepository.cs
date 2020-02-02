@@ -53,6 +53,21 @@ namespace S3Film.DAL
             return message;
         }
 
+        public string DeleteFilm(Film film)
+        {
+            string message;
+            string sql = $"DELETE FROM Film WHERE FilmId = {film.Id}";
+            if (ExecuteNonQuery(sql) > 0)
+            {
+                message = "Filmen er slettet.";
+            }
+            else
+            {
+                message = "Filmen kunne ikke slettes";
+            }
+            return message;
+        }
+
         /// <summary>
         /// Helper method used to convert DataTable to list of Films.
         /// </summary>

@@ -23,7 +23,7 @@ namespace S3Film.GUI.UserControls
     /// </summary>
     public partial class FilmList : UserControl
     {
-        public List<Film> Films { get; } = new FilmRepository().GetFilms();
+        public List<Film> Films { get; set; } = new FilmRepository().GetFilms();
         public string EditIcon = IconFolder + "edit.png";
         public string DeleteIcon = IconFolder + "delete.png";
         
@@ -45,7 +45,10 @@ namespace S3Film.GUI.UserControls
             switch (result)
             {
                 case MessageBoxResult.OK:
-                    MessageBox.Show("Ok");
+                    FilmRepository filmRepository = new FilmRepository();
+                    MessageBox.Show(filmRepository.DeleteFilm(film));
+                    Films = filmRepository.GetFilms();
+                    filmGrid.ItemsSource = Films;
                     break;
                 case MessageBoxResult.Cancel:
                     break;
