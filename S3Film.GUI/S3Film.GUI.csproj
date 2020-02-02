@@ -104,5 +104,9 @@
       <Name>S3Film.Entities</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Img\Icons\edit.png" />
+    <Resource Include="Assets\Img\Icons\delete.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

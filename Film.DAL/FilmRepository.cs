@@ -16,7 +16,7 @@ namespace S3Film.DAL
         /// <returns>A List of all Films</returns>
         public List<Film> GetFilms()
         {
-            string sql = "SELECT * FROM Film";
+            string sql = "SELECT * FROM Film ORDER BY Titel";
             return HandleData(ExecuteQuery(sql));
         }
 

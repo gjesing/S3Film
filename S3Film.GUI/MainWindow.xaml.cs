@@ -22,12 +22,11 @@ namespace S3Film.GUI
     /// </summary>
     public partial class MainWindow : Window
     {
-        public List<Film> Films { get; set; } = new List<Film>();
+        public List<Film> Films { get; } = new FilmRepository().GetFilms();
+
         public MainWindow()
         {
             InitializeComponent();
-            FilmRepository filmRepository = new FilmRepository();
-            Films = filmRepository.GetFilms();
             filmGrid.ItemsSource = Films;
         }
     }
