@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static Extensions.Extensions;
 
 namespace S3Film.GUI
 {
@@ -22,12 +23,9 @@ namespace S3Film.GUI
     /// </summary>
     public partial class MainWindow : Window
     {
-        public List<Film> Films { get; } = new FilmRepository().GetFilms();
-
         public MainWindow()
         {
             InitializeComponent();
-            filmGrid.ItemsSource = Films;
         }
     }
 }

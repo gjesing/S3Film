@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S3Film.Entities", "Film.Ent
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S3Film.GUI", "S3Film.GUI\S3Film.GUI.csproj", "{CEC8313E-8E8A-483B-B843-52DE5CEDFD48}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensions", "Extensions\Extensions.csproj", "{D429CE7B-50E7-4791-BE4D-7C71B1B1C342}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{CEC8313E-8E8A-483B-B843-52DE5CEDFD48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEC8313E-8E8A-483B-B843-52DE5CEDFD48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEC8313E-8E8A-483B-B843-52DE5CEDFD48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D429CE7B-50E7-4791-BE4D-7C71B1B1C342}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D429CE7B-50E7-4791-BE4D-7C71B1B1C342}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D429CE7B-50E7-4791-BE4D-7C71B1B1C342}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D429CE7B-50E7-4791-BE4D-7C71B1B1C342}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
