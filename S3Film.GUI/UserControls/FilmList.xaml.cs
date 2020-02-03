@@ -35,7 +35,10 @@ namespace S3Film.GUI.UserControls
 
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
-
+            Film film = (Film)filmGrid.SelectedItem;
+            new Window { Title = "Rediger film", Content = new UpdateFilm(film), Height = 350, Width = 250 }.ShowDialog();
+            Films = new FilmRepository().GetFilms();
+            filmGrid.ItemsSource = Films;
         }
 
         private void Delete_Click(object sender, RoutedEventArgs e)

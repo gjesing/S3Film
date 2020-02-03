@@ -35,7 +35,7 @@ namespace S3Film.DAL
         /// </summary>
         /// <param name="film">The film to be updated in the database</param>
         /// <returns>A string returning the validation result</returns>
-        public string UpdateFilm(Film film) => IsValid(film) ? (ExecuteNonQuery($"UPDATE Films SET Titel = ('{film.Titel}', Land = '{film.Land}', Year = {film.Year}, Oscars = {film.Oscars} WHERE FilmId = {film.Id}") > 0 ? $"Filmen \"{film.Titel}\" (Id: {film.Id}) er opdateret." : "Alle felter skal udfyldes.") : "Filmen kunne ikke opdateres.";
+        public string UpdateFilm(Film film) => IsValid(film) ? (ExecuteNonQuery($"UPDATE Film SET Titel = '{film.Titel}', Land = '{film.Land}', Year = {film.Year}, Oscars = {film.Oscars} WHERE FilmId = {film.Id}") > 0 ? $"Filmen \"{film.Titel}\" (Id: {film.Id}) er opdateret." : "Alle felter skal udfyldes.") : "Filmen kunne ikke opdateres.";
 
         /// <summary>
         /// Deletes Film from database
