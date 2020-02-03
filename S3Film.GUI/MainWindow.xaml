@@ -9,6 +9,7 @@
         Title="Film" Height="450" Width="800">
     <DockPanel>
         <uc:SearchFilm DockPanel.Dock="Top"/>
+        <uc:CreateFilm DockPanel.Dock="Bottom"/>
         <uc:FilmList/>
     </DockPanel>
 </Window>
