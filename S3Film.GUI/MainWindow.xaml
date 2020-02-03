@@ -7,7 +7,8 @@
         xmlns:uc="clr-namespace:S3Film.GUI.UserControls"
         mc:Ignorable="d"
         Title="Film" Height="450" Width="800">
-    <Grid>
+    <DockPanel>
+        <uc:SearchFilm DockPanel.Dock="Top"/>
         <uc:FilmList/>
-    </Grid>
+    </DockPanel>
 </Window>

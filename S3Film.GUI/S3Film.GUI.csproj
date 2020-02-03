@@ -58,6 +58,9 @@
     <Compile Include="UserControls\FilmList.xaml.cs">
       <DependentUpon>FilmList.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\SearchFilm.xaml.cs">
+      <DependentUpon>SearchFilm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UpdateFilm.xaml.cs">
       <DependentUpon>UpdateFilm.xaml</DependentUpon>
     </Compile>
@@ -74,6 +77,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="UserControls\FilmList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SearchFilm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
